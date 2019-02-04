@@ -4,6 +4,10 @@ This repo contains a standalone Open ID Connect Identity Provider, ready to depl
 
 It leverages [oidc-provider](https://github.com/panva/node-oidc-provider)
 
+Why use this?
+
+We can enable many flows including Hybrid, Code, Device, PKCE with a couple of lines of configuration change.
+
 Install dependencies:
 ``` bash
 npm install
