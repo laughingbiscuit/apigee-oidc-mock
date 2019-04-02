@@ -73,7 +73,6 @@ module.exports = (app, provider) => {
 
             const redirectTo = await provider.interactionResult(req, res, result);
             const redirectToRelative = redirectTo.replace(/http(s?):\/\/(.*):(\d{4})/g, "")
-            console.log("SD+"+redirectToRelative)
             res.status(302).set({Location: redirectToRelative}).send()
         } catch (err) {
             next(err)

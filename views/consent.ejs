@@ -1,7 +1,45 @@
-<h1>Consent</h1>
-<form autocomplete="off" action="/interaction/<%= details.uuid %>/consent" method="post">
-  <input type="hidden" name="uuid" value="<%= details.uuid %>"/>
-  <label>Do you consent to sharing account data for <strong>31926819</strong>?</label>
-  <input type="checkbox" name="consent" value="yes">
-  <button type="submit" class="login login-submit">Submit</button>
-</form>
+  <!doctype html>
+  <html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Consent</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="/signin.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+    <form autocomplete="off" action="/interaction/<%= details.uuid %>/consent" method="post" class="form-signin">
+
+      <h1 class="h3 mb-3 font-weight-normal">Consent</h1>
+      <input type="hidden" name="uuid" value="<%= details.uuid %>" />
+      <label>Do you consent to sharing account data for <strong>31926819</strong>?</label>
+      <input type="checkbox" name="consent" class="form-controle" value="yes">
+      <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
+
+    </form>
+  </body>
+
+  </html>
